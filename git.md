@@ -47,7 +47,7 @@ ssh秘钥保存在id_rsa.pub文件中
 * stash：暂时保存分支上对工作区的修改，使分支干净（可以切换分支）  
 使用`git stash save -u "备注信息"`保存修改（-u可以保存新建的文件）;  
 使用`git stash list`查看保存的所有的暂存修改；  
-使用`git stash apply stash@{a}`可以应用stash@{0}保存的修改（修改全仓库可见）；  
+使用`git stash apply stash@{0}`可以应用stash@{0}保存的修改（修改全仓库可见）；  
 使用`git stash clear`清除所有保存的修改。  
 
 * asdf
