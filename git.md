@@ -71,3 +71,12 @@ ssh秘钥保存在id_rsa.pub文件中
 `git diff ` 比较*workspace*和*stage*之间的文件差别  
 `git diff HEAD` 比较*workspace*和*repertory*之间的文件差别  
 `git diff --staged` or `git diff --cached` 比较*stage*和*repertory*之间的差别
+
+* **tag**:  
+
+
+* **merge**:  
+
+* **rebase**:  
+
+* **revert**:
