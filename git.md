@@ -41,13 +41,33 @@ ssh秘钥保存在id_rsa.pub文件中
 
 * git默认对大小写不敏感  
 使用`git config core.ignorecase false`使该仓库忽略大小写；  
-使用`git rm <文件名>` or `git rm -r <目录名>`删除仓库中的文件或目录；  
+使用`git rm <文件名>` or `git rm -r <目录名>`删除工作去和仓库中的文件或目录；  
 使用`git rm --cached <文件名>`从暂存区取消该文件的暂存。  
  
-* stash：暂时保存分支上对工作区的修改，使分支干净（可以切换分支）  
+* **stash**：暂时保存分支上对工作区的修改，使分支干净（可以切换分支）  
 使用`git stash save -u "备注信息"`保存修改（-u可以保存新建的文件）;  
 使用`git stash list`查看保存的所有的暂存修改；  
 使用`git stash apply stash@{0}`可以应用stash@{0}保存的修改（修改全仓库可见）；  
 使用`git stash clear`清除所有保存的修改。  
 
-* asdf
+* **clean**:删除文件（删除工作区的文件和目录/最后commit之后的修改）  
+`git clean -n` 显示将要删除的文件(只会显示将要删除的文件，不包括目录)  
+`git clean -fd -n` or `git clean -f -d -n` 显示将要的删除的文件和目录  
+`git clean -f -d` or `git clean -fd` 删除文件和目录  
+  
+* **reset**:将当前分支重设到指定的<commit>或者HEAD(默认)    
+分支干净：（最后一次commit之后没有进行任何修改）  
+`git reset --hard commitId` 撤销最近一次的*commit*、*add*、*modiffy*操作   
+`git reset --mixed commitId` (默认参数) 撤销最近一次的*commit*、*add*操作  
+`git reset --soft commitId` 撤销最近一次的*commit*操作   
+
+* **rm**: 从工作区和暂存区将文件删除  
+`git rm filename` 将文件*filename*从*workspce*和*stage*中删除  
+`git rm --cached filename` 将文件*fiename*从*stage*中删除  
+`git rm -r dir` 递归的删除目录*dir*  
+两个参数可以结合使用
+
+* **diff**: 比较*workspce*和*stage*或者*repertory*之间已经被追踪的文件内容的差别  
+`git diff ` 比较*workspace*和*stage*之间的文件差别  
+`git diff HEAD` 比较*workspace*和*repertory*之间的文件差别  
+`git diff --staged` or `git diff --cached` 比较*stage*和*repertory*之间的差别
