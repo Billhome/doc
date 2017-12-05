@@ -1,0 +1,7 @@
+color:颜色值
+	#FFFFFF
+	Color.Red
+
+dimension:尺寸值，（dp/px/sp）
+	使用typeArray.getDimension(R.styleable.dimension,def_dimesion);
+	该方法会根据当前手机的像素密度将布局文件定义的值转化为px;

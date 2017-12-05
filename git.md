@@ -26,6 +26,8 @@ ssh秘钥保存在id_rsa.pub文件中
 * `git add ./` 将当前**工作区**目录下的所有文件和目录提交到**暂存区**  
 * `git commit -m "备注"`将暂存区的文件提交到**版本库**  
 * `git push origin branch`将当前分支的所有提交全部同步到远程分支*branch*上  
+* `git push origin local:remote`创建remote(如果远程没有)，并提交local的代码到remote上  
+* `git push origin :remote`删除远程分支remote
 * `git checkout -b branch`创建*branch*分支，并切换到*branch*分支上  
 * `git checkout branch`切换到*branch*分支上  
 * `git branch`查看所有的分支（本地分支）  
@@ -72,7 +74,16 @@ ssh秘钥保存在id_rsa.pub文件中
 `git diff HEAD` 比较*workspace*和*repertory*之间的文件差别  
 `git diff --staged` or `git diff --cached` 比较*stage*和*repertory*之间的差别
 
-* **tag**:  
+* **tag**: 在commit之前可以给当前提交打标签(对当前提交的说明)  
+`git tag` or `git tag -l`:查看所有标签  
+`git tag -a tagname -m "tagmsg"`:给当前提交打上tagname标签，并标注tagmsg信息  
+`git tag tagname`:给当前提交打上tagname标签，没有标签信息  
+`git push origin -tags`:提交标签到远程仓库  
+`git tag -d tagname`:删除标签  
+`git push origin :tagname`:删除远程仓库的tagname标签(与删除远程仓库分支一样)  
+`git push origin tagname`:提交单独的标签到远程仓库
+>说明：push代码的不会同步提交tag,需要单独提交 
+
 
 
 * **merge**:  

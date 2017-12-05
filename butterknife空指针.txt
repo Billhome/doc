@@ -1,0 +1,20 @@
+butterknige 空指针
+
+第一步：在工程project的根目录下的build.gradle文件中dependencies{}中添加：
+classpath 'com.jakewharton:butterknife-gradle-plugin:8.8.1'
+
+第二步：在模块moudle的目录下的build.gradle文件的顶部添加：
+apply plugin: 'com.jakewharton.butterknife'
+
+最后，在在模块moudle的目录下的build.gradle文件的dependencies{}中添加：
+annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+
+出现错误原因：
+
+？？？
+
+解决原理：
+
+？？？
+

@@ -1,0 +1,29 @@
+ProjectName
+|_ __.gragle :不用关注里面具体内容，IDE会修改里面的内容
+	 |__<gradleVersionCode>
+  |__.idea ：idea的相关配置信息，根据配置不同由IDE修改
+     |__copyright
+	 |__libraries
+	 |__compiler.xml
+	 |__encodings.xml
+	 |__gradle.xml
+	 |__misc.xml
+	 |__moudles.xml
+	 ...
+  |__app ：主模块名，默认生成
+	 |__build
+	 |__libs
+	 |__src
+	 |__.gitignore
+	 |__app.iml 
+	 |__build.gradle 
+	 |__proguard.pro : 配置模块的混淆规则
+  |__build ：项目构建生成的中间信息
+  |__.gitignore ：配置git上传的忽略规则
+  |__build.gradle 
+  |__gradle.properties 
+  |__gradlew 
+  |__gradlew.bat 
+  |__local.properties 
+  |__<ProjectName>.iml 
+  |__setting.gradle 
