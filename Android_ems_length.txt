@@ -1,9 +1,0 @@
-Android：
-<EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:maxLength="1"
-        android:maxEms="1"/>
-android:maxEms="1":表示只显示一个字符，输入多个字符的时候，显示最后一个字符，前面的字符全部不显示
-android:maxLength="1"：只接受并一个字符，当输入多个字符的时候，只接收第一个字符，不接收后面的字符
